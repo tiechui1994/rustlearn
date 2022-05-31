@@ -1,12 +1,18 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
+
+	_ "net/http/pprof"
 )
 
 func startServer() {
 	mux := http.NewServeMux()
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`{"aa":11}`))
+	})
 	mux.HandleFunc("/api/add", AddHandler)
 	mux.HandleFunc("/api/get", GetHandler)
 	mux.HandleFunc("/api/resize", ResizeHandler)
@@ -25,6 +31,14 @@ func main() {
 	if err != nil {
 		os.Exit(1)
 	}
+
+	go func() {
+		ip := ":6060"
+		if err := http.ListenAndServe(ip, nil); err != nil {
+			fmt.Printf("start pprof failed on %s\n", ip)
+			os.Exit(1)
+		}
+	}()
 
 	startServer()
 }
