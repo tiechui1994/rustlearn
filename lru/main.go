@@ -27,7 +27,7 @@ func startServer() {
 }
 
 func main() {
-	err := initCache(1024 * 1024)
+	err := InitCache(1024 * 1024)
 	if err != nil {
 		os.Exit(1)
 	}

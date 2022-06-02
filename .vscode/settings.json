@@ -1,0 +1,8 @@
+{
+    "go.lintTool": "golangci-lint",
+    "go.lintOnSave": "file",
+    "go.lintFlags": [
+        "--fast",
+        "--config=/workspaces/memoryleak/golangci-lint.yml"
+    ]
+}

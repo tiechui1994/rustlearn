@@ -19,7 +19,7 @@ type Cache struct {
 	size int
 }
 
-func initCache(size int) error {
+func InitCache(size int) error {
 	var err error
 	cache.once.Do(func() {
 		cache.Cache, err = lru.New(size)
