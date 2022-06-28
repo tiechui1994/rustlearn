@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/hashicorp/golang-lru"
+	lru "github.com/hashicorp/golang-lru"
 )
 
 var cache Cache

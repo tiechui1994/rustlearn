@@ -1,0 +1,56 @@
+{
+  "linters-settings": {
+    "lll": {
+      "line-length": 120
+    },
+    "funlen": {
+      "lines": 100,
+      "statements": 50
+    },
+    "gocyclo": {
+      "min-complexity": 20
+    },
+    "goconst": {
+      "min-len": 2,
+      "min-occurrences": 3,
+      "ignore-tests": true,
+      "match-constant": true
+    },
+    "misspell": {
+      "locale": "US"
+    }
+  },
+  "linters": {
+    "disable-all": true,
+    "enable": [
+      "bodyclose",
+      "deadcode",
+      "dogsled",
+      "exportloopref",
+      "errcheck",
+      "funlen",
+      "gochecknoinits",
+      "goconst",
+      "gocyclo",
+      "gofmt",
+      "gosec",
+      "gosimple",
+      "govet",
+      "lll",
+      "misspell",
+      "staticcheck",
+      "structcheck",
+      "stylecheck",
+      "typecheck",
+      "unconvert",
+      "unparam",
+      "varcheck",
+      "unused",
+      "whitespace"
+    ]
+  },
+  "run": {
+    "timeout": "10m",
+    "go": "1.17"
+  }
+}

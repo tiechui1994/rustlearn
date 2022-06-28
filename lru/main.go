@@ -27,6 +27,8 @@ func startServer() {
 }
 
 func main() {
+	os.Open("/xxx/xxxxx")
+
 	err := InitCache(1024 * 1024)
 	if err != nil {
 		os.Exit(1)
