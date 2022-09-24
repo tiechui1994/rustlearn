@@ -1,5 +1,6 @@
-# settings
-data/
-shell/
+# user
+.vscode
+.idea
 
+# settings
 *go.sum
