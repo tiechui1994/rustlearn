@@ -4,3 +4,8 @@
 
 # settings
 *go.sum
+
+# rust
+target/
+Cargo.lock
+
